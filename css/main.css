@@ -60,7 +60,7 @@ a {
 /* End global rules */
 /* start header  */
 body>header {
-    background-color: red;
+    background-color: white;
     box-shadow: 0 0 10px #ddd;
 }
 
@@ -68,6 +68,7 @@ body>header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
 body>header .container ul.main-nav {
@@ -89,14 +90,19 @@ body>header .container ul.main-nav li a:hover {
     color: var(--main-color);
 }
 
-body>header .container ul.main-nav li a:hover::after {
+body>header .container ul.main-nav li a::after {
     content: "";
     position: absolute;
     height: 4px;
-    width: 100%;
+    width: 0%;
     background-color: var(--main-color);
     top: 0;
     left: 0;
+    transition-duration: var(--main-transition);
+}
+
+body>header .container ul.main-nav li a:hover::after {
+    width: 100%;
 }
 
 body>header .container .logo {
@@ -125,6 +131,81 @@ body>header .container .logo {
         font-size: 14px;
         padding: 10px;
     }
+}
+
+body>header .second-nav {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    background-color: green;
+    top: 81px;
+    padding: 15px 30px;
+    gap: 30px;
+    align-items: center;
+    border-bottom: 3px solid var(--main-color);
+    display: none;
+}
+
+body>header .second-nav .links-container {
+    display: flex;
+    gap: 40px;
+    flex-grow: 1;
+}
+
+body>header .second-nav .links-container .links {
+    width: 50%;
+}
+
+body>header .second-nav .links-container a {
+    columns: var(--main-color);
+    text-transform: capitalize;
+    font-weight: bold;
+    padding: 15px 0;
+    font-size: 18px;
+    display: block;
+}
+
+body>header .second-nav .links-container li:not(:last-child) {
+    border-bottom: 1px solid #777;
+}
+
+
+body>header .second-nav .links-container a i {
+    padding-left: 8px;
+    padding-right: 10px;
+}
+
+body>header .second-nav img {
+    width: 300px;
+}
+
+@media(max-width:992px) {
+    body>header .second-nav .photo {
+        display: none;
+    }
+
+    body>header .second-nav {
+        top: 91px;
+    }
+}
+
+@media(max-width:767px) {
+    body>header .second-nav .links-container {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    body>header .second-nav .links-container .links {
+        width: 100%;
+    }
+
+    body>header .second-nav .links-container .links:not(:last-child) li:last-child {
+        border-bottom: 1px solid #777;
+    }
+}
+
+body>header .container ul.main-nav li:last-child a:hover {
+    display: flex;
 }
 
 /* end header   */
