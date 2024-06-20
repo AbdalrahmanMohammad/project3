@@ -898,7 +898,7 @@ body>header .second-nav:hover {
     justify-content: center;
     align-items: center;
     position: relative;
-    transition-duration:var(--main-transition) ;
+    transition-duration: var(--main-transition);
 }
 
 .services .container .card::before {
@@ -979,3 +979,66 @@ body>header .second-nav:hover {
 }
 
 /* end services */
+/* start skills */
+.skills {
+    padding: var(--section-padding) 0;
+}
+
+.skills .container {
+    display: flex;
+}
+
+.skills .container .bars {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.skills .container .bars .item {
+    display: flex;
+    flex-direction: column;
+}
+
+.skills .container .bars .item .percentage {
+    width: 100%;
+    height: 30px;
+    background-color: #d5d5d5;
+    margin: 10px 0 20px;
+    position: relative;
+}
+.skills .container .bars .item .percentage::after {
+    content: attr(my-percentage) ;
+    position: absolute;
+    top: -12px;
+    transform: translateY(-100%);
+    right: 0px;
+    border: 1px solid gray;
+    padding: 3px 5px;
+    border-radius: 5px;
+    color: var(--main-color);
+}
+
+.skills .container .bars .item .percentage::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    /*for the first and the last*/
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--main-color);
+}
+
+.skills .container .bars .item:nth-child(2) .percentage::before {
+    width: 85%;
+}
+
+.skills .container .bars .item:nth-child(3) .percentage::before {
+    width: 70%;
+}
+@media (max-width:992px) {
+    .skills .container .image {
+        display: none;
+    }
+}
+/* end skills */
