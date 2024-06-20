@@ -1021,7 +1021,7 @@ body>header .second-nav:hover {
 .skills .container .bars .item .percentage::before {
     content: "";
     position: absolute;
-    width: 0%;
+    width: 80%;
     /*for the first and the last*/
     left: 0;
     top: 0;
