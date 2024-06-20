@@ -727,6 +727,7 @@ body>header .second-nav:hover {
     padding: 20px;
     border-radius: 10px;
 }
+
 .testmonials .container h3 {
     text-transform: capitalize;
 }
@@ -763,3 +764,122 @@ body>header .second-nav:hover {
 }
 
 /* end testmonials */
+/* start TEAM MEMBERS */
+.members {
+    padding: var(--section-padding) 0;
+}
+
+.members .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 30px;
+}
+
+.members .container .card {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.members .container .image {
+    position: absolute;
+    z-index: 2;
+    max-width: 285px;
+    top: 46%;
+    left: 0;
+    transform: translate(0, -50%);
+    overflow: hidden;
+}
+
+.members .container img {
+    max-width: 100%;
+    border-radius: 10px;
+    transition-duration: var(--main-transition);
+}
+
+.members .container .back {
+    height: 430px;
+    background-color: #e6e6e7;
+    width: 285px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.members .container .back::before {
+    right: 0;
+    border-radius: 10px;
+    top: 0;
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color: rgba(102, 102, 102, 0.3);
+    transition-duration: var(--main-transition);
+}
+
+.members .container .back .text {
+    text-transform: capitalize;
+}
+
+.members .container .back h3 {
+    font-size: 22px;
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+
+.members .container .back .social {
+    color: #777;
+    width: calc(100% - 285px);
+    display: flex;
+    flex-direction: column;
+    right: 0px;
+    position: absolute;
+    top: 46%;
+    transform: translateY(-50%);
+    align-items: center;
+}
+
+.members .container .back .social a {
+    display: block;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+
+    &:hover {
+        color: var(--main-color);
+    }
+}
+
+.members .container .card:hover img {
+    filter: grayscale(100%);
+}
+
+.members .container .card:hover h3 {
+    color: #777;
+}
+
+.members .container .card:hover .back::before {
+    width: 285px;
+}
+
+@media(max-width:767px) {
+    .members .container .back {
+        width: 100%;
+    }
+
+    .members .container .card:hover .back::before {
+        width: 100%;
+    }
+}
+
+/* end TEAM MEMBERS */
+/* start services */
+.services{
+    padding: var(--section-padding) 0;
+    background-color: ;
+}
+/* end services */
