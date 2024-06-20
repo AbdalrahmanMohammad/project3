@@ -878,8 +878,104 @@ body>header .second-nav:hover {
 
 /* end TEAM MEMBERS */
 /* start services */
-.services{
+.services {
     padding: var(--section-padding) 0;
-    background-color: ;
+    background-color: var(--section-background);
 }
+
+.services .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 30px;
+}
+
+.services .container .card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 0;
+    background-color: white;
+    box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition-duration:var(--main-transition) ;
+}
+
+.services .container .card::before {
+    position: absolute;
+    content: "";
+    background-color: var(--main-color);
+    width: 0%;
+    height: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    transition-duration: var(--main-transition);
+}
+
+.services .container .card .top {
+    color: #d5d5d5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.services .container .card .top h3 {
+    font-size: 25px;
+    color: var(--main-color);
+    padding: 20px 0;
+}
+
+.services .container .card .bottom {
+    color: var(--main-color);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.services .container .card .bottom::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 30%;
+    background-color: #d5d5d5;
+    left: 20%;
+    top: 0;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.services .container .card .bottom .number {
+    color: white;
+    font-size: 30px;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    width: 30%;
+    padding: 0 20px;
+    font-weight: bold;
+
+}
+
+.services .container .card .bottom a {
+    background-color: #f9f9f9;
+    display: flex;
+    padding: 0 20px;
+    justify-content: flex-end;
+    align-items: center;
+    width: 70%;
+}
+
+.services .card:hover {
+    transform: translateY(-10px);
+}
+
+.services .card:hover::before {
+    width: 100%;
+}
+
 /* end services */
