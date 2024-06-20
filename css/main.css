@@ -572,6 +572,7 @@ body>header .second-nav:hover {
 
 .features .container .card .image {
     position: relative;
+    overflow: hidden;
 }
 
 .features .container .card .image::before {
@@ -589,8 +590,8 @@ body>header .second-nav:hover {
     content: "";
     position: absolute;
     top: 51%;
-    left: 0;
-    width: 100%;
+    left: -5px;
+    width: 104%;
     height: 50%;
     background-color: white;
     z-index: 6;
@@ -644,7 +645,7 @@ body>header .second-nav:hover {
     position: relative;
     background: linear-gradient(to right, blue 50%, white 50%);
     background-position: right;
-    background-size: 210% 100%;
+    background-size: 210% 110%;
 }
 
 /* coloring the first child */
@@ -678,6 +679,7 @@ body>header .second-nav:hover {
 .features .container .card:nth-child(2) .image::before {
     background-color: rgba(0, 150, 136, 0.5);
 }
+
 /* finish coloring the second child */
 /* coloring the third child */
 .features .container .card:nth-child(3) a {
@@ -693,6 +695,7 @@ body>header .second-nav:hover {
 .features .container .card:nth-child(3) .image::before {
     background-color: rgba(3, 169, 244, 0.5);
 }
+
 /* finish coloring the third child */
 .features .container .card:hover a {
     color: white;
@@ -704,3 +707,59 @@ body>header .second-nav:hover {
 }
 
 /* end features */
+/* start testmonials */
+.testmonials {
+    padding: var(--section-padding) 0;
+    background-color: var(--section-background);
+}
+
+.testmonials .container {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(333px, 1fr));
+}
+
+.testmonials .container .card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+.testmonials .container h3 {
+    text-transform: capitalize;
+}
+
+.testmonials .container span {
+    color: #777;
+    margin: 8px 0;
+}
+
+.testmonials .container i.filled {
+    color: gold;
+}
+
+.testmonials .container p {
+    color: #777;
+    line-height: 1.6;
+    margin-top: 5px;
+}
+
+.testmonials .container .card .image {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid var(--section-background);
+    right: 0;
+    top: 0;
+    transform: translateY(-50%);
+}
+
+.testmonials .container .card img {
+    width: 100%;
+}
+
+/* end testmonials */
