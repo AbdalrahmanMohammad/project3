@@ -30,6 +30,7 @@ ul {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 .container {
@@ -47,7 +48,7 @@ a {
     padding: 10px 20px;
     border: 2px solid black;
     position: relative;
-    transition-duration:var(--main-transition);
+    transition-duration: var(--main-transition);
 
     &::after {
         content: "";
@@ -86,6 +87,7 @@ a {
         transition: right 0.3s, width 0.2s 0.3s, height 0.2s 0.3s, border-radius 0.2s 0.3s;
 
     }
+
     &:hover::before {
         left: 0;
         width: 55%;
@@ -94,32 +96,14 @@ a {
         z-index: -1;
         transition: left 0.3s, width 0.2s 0.3s, height 0.2s 0.3s, border-radius 0.2s 0.3s;
     }
-    &:hover{
+
+    &:hover {
         color: white;
         border-color: white;
         transition-delay: 0.5s;
     }
 }
 
-@keyframes heading-animation {
-    0% {
-        top: 0px;
-    }
-
-    33% {
-        top: 20px;
-    }
-
-    100% {
-        top: 45px;
-
-    }
-
-    /* 100% {
-        top: 70px;
-    } */
-
-}
 /* small */
 @media (min-width: 768px) {
     .container {
@@ -446,6 +430,56 @@ body>header .second-nav:hover {
 /* start articles */
 .articles {
     padding: var(--section-padding) 0;
+}
+
+.articles .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.articles .container .card {
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+    border-radius: 5px;
+    overflow: hidden;
+    transition-duration: var(--main-transition);
+}
+
+.articles .container .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+
+}
+
+.articles .container .text {
+    padding: 20px;
+    border-bottom: 1px solid #e6e6e7;
+}
+
+.articles .container .text p {
+    color: #777;
+    margin-top: 10px;
+}
+
+.articles .container img {
+    max-width: 100%;
+}
+
+.articles .container .more {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--main-color);
+}
+
+.articles .container .card:hover .more i {
+    animation: articles-arrow infinite 0.8s linear;
+}
+
+@keyframes articles-arrow {
+    to {
+        transform: translateX(10px);
+    }
 }
 
 /* end articles */
