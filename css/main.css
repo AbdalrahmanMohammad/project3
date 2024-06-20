@@ -3,6 +3,7 @@
     --main-color: #2196f3;
     --main-color-alt: #1787e0;
     --main-transition: 0.3s;
+    --section-padding: 60px;
 }
 
 /* End variables */
@@ -36,6 +37,89 @@ a {
     padding: 0 15px;
 }
 
+.special-heading {
+    margin: 0 auto;
+    margin-bottom: 80px;
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    width: fit-content;
+    padding: 10px 20px;
+    border: 2px solid black;
+    position: relative;
+    transition-duration:var(--main-transition);
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        right: -30px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: var(--main-color);
+        /* transition-duration:var(--main-transition); */
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        left: -30px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: var(--main-color);
+        /* transition-duration:var(--main-transition); */
+    }
+
+    &:hover::after {
+        right: 0;
+        width: 50%;
+        height: 100%;
+        border-radius: 0;
+        z-index: -1;
+        transition: right 0.3s, width 0.2s 0.3s, height 0.2s 0.3s, border-radius 0.2s 0.3s;
+
+    }
+    &:hover::before {
+        left: 0;
+        width: 55%;
+        height: 100%;
+        border-radius: 0;
+        z-index: -1;
+        transition: left 0.3s, width 0.2s 0.3s, height 0.2s 0.3s, border-radius 0.2s 0.3s;
+    }
+    &:hover{
+        color: white;
+        border-color: white;
+        transition-delay: 0.5s;
+    }
+}
+
+@keyframes heading-animation {
+    0% {
+        top: 0px;
+    }
+
+    33% {
+        top: 20px;
+    }
+
+    100% {
+        top: 45px;
+
+    }
+
+    /* 100% {
+        top: 70px;
+    } */
+
+}
 /* small */
 @media (min-width: 768px) {
     .container {
@@ -359,3 +443,9 @@ body>header .second-nav:hover {
 }
 
 /* end landing page */
+/* start articles */
+.articles {
+    padding: var(--section-padding) 0;
+}
+
+/* end articles */
