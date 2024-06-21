@@ -1586,4 +1586,119 @@ body>header .second-nav:hover {
     font-style: italic;
     font-size: 20px;
 }
+
 /* end stats */
+/* start discount */
+.discount {
+    /* padding: var(--section-padding) 0; */
+    display: flex;
+}
+
+.discount>div {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    padding: 30px;
+}
+
+.discount .left {
+    background-image: url("../images/discount-background1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    position: relative;
+    padding-top: 80px;
+    animation: change-background 10s infinite linear;
+}
+
+.discount .left::before {
+    background-color: rgb(23 135 224 / 97%);
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.discount .left * {
+    position: relative;
+    text-align: center;
+}
+
+.discount .left img {
+    max-width: 100%;
+    width: 300px;
+}
+
+.discount .left h3 {
+    font-size: 40px;
+    letter-spacing: -2px;
+}
+
+.discount .left p {
+    align-self: center;
+    margin: 30px 0;
+    line-height: 1.6;
+    font-size: 18px;
+    max-width: 500px;
+}
+
+.discount .right {
+    align-items: center;
+}
+
+.discount .right h3 {
+    font-size: 40px;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+    width: fit-content;
+}
+
+.discount .right form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.discount .right form * {
+    max-width: 301px;
+    width: 301px;
+    padding: 15px;
+    margin-bottom: 25px;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    background-color: #f9f9f9;
+    caret-color: var(--main-color);
+}
+.discount .right form *:focus::placeholder {
+    transition: var(--main-transition);
+    opacity: 0;
+
+}
+
+.discount .right textarea {
+    height: 200px;
+    resize: none;
+}
+
+.discount .right button {
+    color: white;
+    background-color: var(--main-color);
+}
+@media (max-width:992px)
+{
+    .discount{
+        flex-direction: column;
+    }
+}
+@keyframes change-background {
+    0%,100%{
+        background-image: url("../images/discount-background1.jpg");
+    }
+    50%{
+        background-image: url("../images/discount-background2.jpg");
+    }
+}
+/* end discount */
