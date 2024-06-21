@@ -1224,10 +1224,12 @@ body>header .second-nav:hover {
     border: 0;
     outline: none;
 }
+
 .events .bottom input:focus::placeholder {
     opacity: 0;
     transition-duration: var(--main-transition);
 }
+
 .events .bottom button {
     padding: 10px;
     color: white;
@@ -1239,26 +1241,186 @@ body>header .second-nav:hover {
     padding: 10px;
     font-weight: bold;
 }
-@media (max-width:992px)
-{
-    .events .image{
+
+@media (max-width:992px) {
+    .events .image {
         display: none;
     }
+
     .events .bottom {
-        margin-top:50px;
+        margin-top: 50px;
         flex-direction: column;
     }
-    .events .card{
+
+    .events .card {
         width: 70px;
     }
+
     .events .card span:first-child {
         font-size: 30px;
     }
-    .events .bottom, .events input, .events button {
+
+    .events .bottom,
+    .events input,
+    .events button {
         border-radius: 0;
     }
-    .events .bottom input{
+
+    .events .bottom input {
         max-width: 100%;
     }
 }
+
 /* end events */
+/* start plans */
+.plans {
+    padding: var(--section-padding) 0;
+    background-color: var(--section-background);
+}
+
+.plans .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 30px;
+}
+
+.plans .container .card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+    justify-content: center;
+    position: relative;
+    max-width: 100%;
+}
+
+.plans .container .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50.1%;
+    width: 0%;
+    background-color: #f6f6f6;
+    transition: var(--main-transition);
+}
+
+.plans .container .card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 50%;
+    width: 0%;
+    transform: translateY(100%);
+    background-color: #f6f6f6;
+    transition: var(--main-transition);
+}
+
+.plans .container .card:hover::before {
+    width: 100%;
+}
+
+.plans .container .card:hover::after {
+    width: 100%;
+}
+
+.plans .container .card .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    position: relative;
+}
+
+.plans .container .card:nth-child(2) .top::before {
+    content: "Most Popular";
+    position: absolute;
+    top: 52px;
+    right: -30px;
+    padding: 10px;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    padding-right: 40px;
+    transform: rotate(90deg);
+    clip-path: polygon(100% 0, 85% 50%, 100% 100%, 0 100%, 0 0);
+
+}
+
+.plans .container .card .top h3 {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.plans .container .card .top .price {
+    font-size: 60px;
+    color: var(--main-color);
+    font-weight: bold;
+    margin: 15px 0 5px;
+}
+
+.plans .container .card .top .month {
+    color: #777;
+}
+
+.plans .container .card .top span {
+    display: block;
+}
+
+.plans .container .card .top ul {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 5;
+}
+
+.plans .container ul li {
+    border-top: 1px solid #eee;
+    padding: 20px 0;
+    padding-left: 20px;
+    z-index: 5;
+position: relative;
+    &::before {
+        font-family: "Font Awesome 5 Free";
+        content: "\f00c";
+        margin-right: 10px;
+        font-weight: 900;
+        font-size: 18px;
+        color: var(--main-color);
+    }
+}
+
+.plans button {
+    position: relative;
+    align-self: center;
+    margin: 30px 0 40px;
+    border: 2px solid var(--main-color);
+    padding: 15px 20px;
+    border-radius: 6px;
+    background: linear-gradient(to left, var(--main-color) 50%, transparent 50%);
+    background-position: 0%;
+    background-size: 210% 110%;
+    color: var(--main-color);
+    font-weight: bold;
+    transition-duration: var(--main-transition);
+    z-index: 5;
+}
+
+.plans .card button:hover {
+    color: white;
+    background-position: 98%;
+}
+
+.plans .container img {
+    width: 80px;
+}
+
+@media (min-width:1140px) {
+    .plans .card:nth-child(2) {
+        transform: translateY(-20px);
+    }
+}
+
+/* end plans */
