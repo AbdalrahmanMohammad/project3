@@ -50,6 +50,7 @@ a {
     border: 2px solid black;
     position: relative;
     transition-duration: var(--main-transition);
+    z-index: 1;
 
     &::after {
         content: "";
