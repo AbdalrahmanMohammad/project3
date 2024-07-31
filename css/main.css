@@ -360,6 +360,15 @@ body>header .second-nav:hover {
     height: calc(100vh - 81px);
     background-color: white;
     position: relative;
+    background-image: url("../images/aborateb.jpg");
+    background-size: cover;
+    /* Ensures the image covers the entire element */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    /* clip-path: polygon(0 0%, 100% 0, 100% 74%, 0 94%); */
+
 }
 
 .landing::before {
@@ -367,26 +376,28 @@ body>header .second-nav:hover {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #ececec;
-    clip-path: polygon(0 0%, 100% 0, 100% 74%, 0 94%);
+    background: rgba(0, 0, 0, 80%);
+    /* Black see-through */
+
 }
 
 .landing .container {
+    align-items: center;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     height: 100%;
     position: relative;
 }
 
-.landing img {
+/* .landing img {
     width: 1200px;
     max-width: 100%;
     position: relative;
     animation: landing-image 3s infinite linear alternate;
 
-}
+} */
 
-@keyframes landing-image {
+/* @keyframes landing-image {
     0% {
         top: 0px;
     }
@@ -402,24 +413,30 @@ body>header .second-nav:hover {
 
     /* 100% {
         top: 70px;
-    } */
+    } 
 
-}
+} */
 
 .landing .text {
     position: relative;
     top: 100px;
     height: fit-content;
+    width: 80%;
+    transform: translateY(-50%);
+
 }
 
 .landing h1 {
-    font-size: 40px;
+    font-size: 70px;
+    color: purple;
+    margin-bottom: 30px;
 }
 
 .landing p {
-    font-size: 23px;
+    font-size: 30px;
     color: #666;
     margin-top: 5px;
+    color: rgb(184, 133, 184);
 }
 
 @media (max-width:992px) {
@@ -428,15 +445,17 @@ body>header .second-nav:hover {
     }
 
     .landing .text {
-        top: 190px;
+        /* top: 190px; */
         justify-content: center;
         align-items: center;
         text-align: center;
+        width: 100%;
     }
 
-    .landing::before {
-        clip-path: polygon(0 0%, 100% 0, 100% 90%, 0 94%);
+    .landing .text h1 {
+        font-size: 60px;
     }
+
 }
 
 .landing span a {
