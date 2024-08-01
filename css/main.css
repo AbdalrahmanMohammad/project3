@@ -669,6 +669,7 @@ body>header .second-nav:hover {
 .gallery .card.show .title,
 .gallery .card.show .prices {
     display: flex;
+    justify-content: space-evenly;
 }
 
 .gallery .card.show img {
@@ -694,6 +695,15 @@ body>header .second-nav:hover {
         width: 200%;
         height: 200%;
     }
+}
+
+@media (max-width:992px) {
+
+    .gallery .card .title,
+    .gallery .card .prices {
+        font-size: 24;
+    }
+
 }
 
 /* end gallery */
