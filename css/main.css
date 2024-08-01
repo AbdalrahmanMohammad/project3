@@ -289,7 +289,7 @@ body>header .container .logo {
         font-size: 14px;
         padding: 10px;
     }
-    
+
 }
 
 body>header .second-nav {
@@ -562,9 +562,13 @@ body>header .second-nav:hover {
 }
 
 .articles .container .text {
+    height: 100px;
     padding: 20px;
     border-bottom: 1px solid #e6e6e7;
+    color: rgb(65, 2, 65);
 }
+
+
 
 .articles .container .text p {
     color: #777;
@@ -578,19 +582,13 @@ body>header .second-nav:hover {
 .articles .container .more {
     padding: 20px;
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     color: var(--main-color);
+    font-weight: bold;
 }
 
-.articles .container .card:hover .more i {
-    animation: articles-arrow infinite 0.8s linear;
-}
 
-@keyframes articles-arrow {
-    to {
-        transform: translateX(10px);
-    }
-}
 
 /* end articles */
 /* start gallery */
@@ -609,16 +607,16 @@ body>header .second-nav:hover {
     border: 10px solid white;
     overflow: hidden;
     position: relative;
+    cursor: pointer;
 }
 
-.gallery .container .card:hover img {
+/* .gallery .container .card img {
     transform: scale(1.1) rotate(5deg);
 }
 
-.gallery .container .card:hover::before {
+.gallery .container .card::before {
     animation: gallery-image 0.5s linear;
-
-}
+} */
 
 .gallery .container .card img {
     max-width: 100%;
@@ -640,6 +638,49 @@ body>header .second-nav:hover {
     z-index: 5;
     transition-duration: var(--main-transition);
 }
+
+.gallery .card .prices {
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    opacity: 50%;
+    display: none;
+    justify-content: center;
+
+}
+
+.gallery .card .title {
+    font-size: 30px;
+    opacity: 50%;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    display: none;
+    justify-content: center;
+}
+
+.gallery .card.show .title,
+.gallery .card.show .prices {
+    display: flex;
+}
+
+.gallery .card.show img {
+    transform: scale(1.1) rotate(5deg);
+
+}
+
+.gallery .card.show::before {
+    animation: gallery-image 0.5s linear;
+}
+
+
 
 @keyframes gallery-image {
 
