@@ -14,3 +14,18 @@ gallery.addEventListener("click", (e) => {
 
 });
 // end gallery
+// start features
+let features = document.querySelector(".features .container");
+let featuresCard = document.querySelectorAll(".features .container .card");
+let featuresTitle = document.querySelectorAll(".features .container .card .title");
+let featuresPrice = document.querySelectorAll(".features .container .card .prices");
+
+features.addEventListener("click", (e) => {
+    let card = e.target.closest(".card");
+    if (card) {
+        console.log(card);
+        card.classList.toggle("show");
+    }
+});
+
+// end features

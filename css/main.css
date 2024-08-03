@@ -724,9 +724,13 @@ body>header .second-nav:hover {
     align-items: center;
     text-align: center;
     border: 1px solid #ccc;
+    height: fit-content;
 }
 
-.features .container .card:hover .image::after {
+/* .features .container .card:hover .image::after {
+    clip-path: polygon(0 70%, -30% 15%, 100% 100%, 0% 100%);
+} */
+.features .container .card.show .image::after {
     clip-path: polygon(0 70%, -30% 15%, 100% 100%, 0% 100%);
 }
 
@@ -792,7 +796,7 @@ body>header .second-nav:hover {
     margin: 10px 0;
 }
 
-.features .container .card a {
+/* .features .container .card a {
     display: block;
     padding: 10px 30px;
     border: 3px solid blue;
@@ -806,54 +810,64 @@ body>header .second-nav:hover {
     background: linear-gradient(to right, blue 50%, white 50%);
     background-position: right;
     background-size: 210% 110%;
-}
+} */
+
 
 /* coloring the first child */
-.features .container .card:nth-child(1) a {
+.features .container .card.red a {
     background-image: linear-gradient(to right, #f44036 50%, white 50%);
     border: 3px solid #f44036;
     color: #f44036;
 }
 
-.features .container .card:nth-child(1) .text h2::after {
+.features .container .card.red .text h2::after {
     background-color: #f44036;
 }
 
-.features .container .card:nth-child(1) .image::before {
-    background-color: rgba(244, 64, 54, 0.5);
+.features .container .card.red .image::before {
+    background-color: rgba(199, 77, 70, 0.5);
 
+}
+.features .card.red .prices {
+    color:  #f44036;
 }
 
 /* finish coloring the first child */
 /* coloring the second child */
-.features .container .card:nth-child(2) a {
+.features .container .card.green a {
     background-image: linear-gradient(to right, #009688 50%, white 50%);
     border: 3px solid #009688;
     color: #009688;
 }
 
-.features .container .card:nth-child(2) .text h2::after {
+.features .container .card.green .text h2::after {
     background-color: #009688;
 }
 
-.features .container .card:nth-child(2) .image::before {
+.features .container .card.green .image::before {
     background-color: rgba(0, 150, 136, 0.5);
 }
-
+.features .card.green .prices {
+    color: #009688;
+}
 /* finish coloring the second child */
 /* coloring the third child */
-.features .container .card:nth-child(3) a {
+.features .container .card.blue a {
     background-image: linear-gradient(to right, #03a9f4 50%, white 50%);
     border: 3px solid #03a9f4;
     color: #03a9f4;
 }
 
-.features .container .card:nth-child(3) .text h2::after {
+.features .container .card.blue .text h2::after {
     background-color: #03a9f4;
 }
 
-.features .container .card:nth-child(3) .image::before {
+.features .container .card.blue .image::before {
     background-color: rgba(3, 169, 244, 0.5);
+}
+
+.features .card.blue .prices {
+    color: #03a9f4;
 }
 
 /* finish coloring the third child */
@@ -864,6 +878,24 @@ body>header .second-nav:hover {
 
 .features .container img {
     max-width: 100%;
+}
+
+.features .card .prices {
+    /* position: absolute; */
+    color: var(--main-color);
+    font-size: 30px;
+    font-weight: bold;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    opacity: 50%;
+    margin-bottom: 10px;
+    opacity: 0;
+}
+.features .card.show .prices {
+    opacity: .8;
 }
 
 /* end features */
