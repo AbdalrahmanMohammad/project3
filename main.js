@@ -17,8 +17,6 @@ gallery.addEventListener("click", (e) => {
 // start features
 let features = document.querySelector(".features .container");
 let featuresCard = document.querySelectorAll(".features .container .card");
-let featuresTitle = document.querySelectorAll(".features .container .card .title");
-let featuresPrice = document.querySelectorAll(".features .container .card .prices");
 
 features.addEventListener("click", (e) => {
     let card = e.target.closest(".card");
@@ -29,3 +27,18 @@ features.addEventListener("click", (e) => {
 });
 
 // end features
+// start members
+let members = document.querySelector(".members .container");
+let membersCard = document.querySelectorAll(".members .container .card");
+
+for (let i = 0; i < membersCard.length; i++)
+    membersCard[i].classList.add("hide");
+
+members.addEventListener("click", (e) => {
+    let card = e.target.closest(".card");
+    if (card) {
+        console.log(card);
+        card.classList.toggle("hide");
+    }
+});
+// end members

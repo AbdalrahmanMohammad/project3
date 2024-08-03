@@ -725,6 +725,7 @@ body>header .second-nav:hover {
     text-align: center;
     border: 1px solid #ccc;
     height: fit-content;
+    cursor: pointer;
 }
 
 /* .features .container .card:hover .image::after {
@@ -963,7 +964,8 @@ body>header .second-nav:hover {
 
 .members .container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(330px, auto));
+    justify-content: center;
     gap: 30px;
 }
 
@@ -979,9 +981,10 @@ body>header .second-nav:hover {
     z-index: 2;
     max-width: 285px;
     top: 46%;
-    left: 0;
+    right: 0;
     transform: translate(0, -50%);
     overflow: hidden;
+    cursor: pointer;
 }
 
 .members .container img {
@@ -999,10 +1002,11 @@ body>header .second-nav:hover {
     flex-direction: column;
     justify-content: flex-end;
     padding: 20px;
+    cursor: pointer;
 }
 
 .members .container .back::before {
-    right: 0;
+    left: 0;
     border-radius: 10px;
     top: 0;
     content: "";
@@ -1028,14 +1032,16 @@ body>header .second-nav:hover {
     width: calc(100% - 285px);
     display: flex;
     flex-direction: column;
-    right: 0px;
+    left: 0px;
     position: absolute;
     top: 46%;
     transform: translateY(-50%);
     align-items: center;
 }
+.members .container .card.hide .back .social {opacity: 0;}
 
-.members .container .back .social a {
+
+.members .container .back .social div {
     display: block;
     padding: 20px 0;
     width: 100%;
@@ -1046,15 +1052,15 @@ body>header .second-nav:hover {
     }
 }
 
-.members .container .card:hover img {
+.members .container .card.hide img {
     filter: grayscale(100%);
 }
 
-.members .container .card:hover h3 {
+.members .container .card.hide h3 {
     color: #777;
 }
 
-.members .container .card:hover .back::before {
+.members .container .card.hide .back::before {
     width: 285px;
 }
 
@@ -1063,7 +1069,7 @@ body>header .second-nav:hover {
         width: 100%;
     }
 
-    .members .container .card:hover .back::before {
+    .members .container .card.hide .back::before {
         width: 100%;
     }
 }
