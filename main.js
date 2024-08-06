@@ -21,7 +21,6 @@ let featuresCard = document.querySelectorAll(".features .container .card");
 features.addEventListener("click", (e) => {
     let card = e.target.closest(".card");
     if (card) {
-        console.log(card);
         card.classList.toggle("show");
     }
 });
@@ -37,8 +36,19 @@ for (let i = 0; i < membersCard.length; i++)
 members.addEventListener("click", (e) => {
     let card = e.target.closest(".card");
     if (card) {
-        console.log(card);
         card.classList.toggle("hide");
     }
 });
 // end members
+
+// start services
+let services = document.querySelector(".services .container");
+let servicesCard = document.querySelectorAll(".services .container .card");
+
+services.addEventListener("click", (e) => {
+    let card = e.target.closest(".card");
+    if (card) {
+        card.classList.toggle("show");
+    }
+});
+// end services

@@ -829,8 +829,9 @@ body>header .second-nav:hover {
     background-color: rgba(199, 77, 70, 0.5);
 
 }
+
 .features .card.red .prices {
-    color:  #f44036;
+    color: #f44036;
 }
 
 /* finish coloring the first child */
@@ -848,9 +849,11 @@ body>header .second-nav:hover {
 .features .container .card.green .image::before {
     background-color: rgba(0, 150, 136, 0.5);
 }
+
 .features .card.green .prices {
     color: #009688;
 }
+
 /* finish coloring the second child */
 /* coloring the third child */
 .features .container .card.blue a {
@@ -895,6 +898,7 @@ body>header .second-nav:hover {
     margin-bottom: 10px;
     opacity: 0;
 }
+
 .features .card.show .prices {
     opacity: .8;
 }
@@ -1038,7 +1042,10 @@ body>header .second-nav:hover {
     transform: translateY(-50%);
     align-items: center;
 }
-.members .container .card.hide .back .social {opacity: 0;}
+
+.members .container .card.hide .back .social {
+    opacity: 0;
+}
 
 
 .members .container .back .social div {
@@ -1090,14 +1097,38 @@ body>header .second-nav:hover {
 .services .container .card {
     display: flex;
     flex-direction: column;
-    padding: 20px 0 0;
     background-color: white;
     box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow: hidden;
     transition-duration: var(--main-transition);
+    cursor: pointer;
 }
+
+/* //////////// */
+
+.services .container .card.show {
+    transform: translateY(-10px);
+}
+
+.services .container .card.show::before {
+    width: 100%;
+}
+
+.services .container .card.show .bottom .number span {
+    position: relative;
+    left: 0;
+    transition: 0.5s;
+}
+
+.services .container .card.show .bottom a span {
+    position: relative;
+    left: 0;
+    transition: 0.5s;
+}
+/* //////////// */
 
 .services .container .card::before {
     position: absolute;
@@ -1117,12 +1148,14 @@ body>header .second-nav:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%;
+    height: 200px;
 }
 
-.services .container .card .top h3 {
-    font-size: 25px;
-    color: var(--main-color);
-    padding: 20px 0;
+.services .container .card .top img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .services .container .card .bottom {
@@ -1136,17 +1169,19 @@ body>header .second-nav:hover {
 
 .services .container .card .bottom::before {
     content: "";
+    z-index: 10;
     position: absolute;
     height: 100%;
     width: 30%;
     background-color: #d5d5d5;
-    left: 20%;
+    right: 20%;
     top: 0;
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 
 .services .container .card .bottom .number {
     color: white;
+    position: relative;
     font-size: 30px;
     background-color: var(--main-color);
     display: flex;
@@ -1156,7 +1191,12 @@ body>header .second-nav:hover {
     width: 30%;
     padding: 0 20px;
     font-weight: bold;
+}
 
+.services .container .card .bottom .number span {
+    position: relative;
+    left: -576px;
+    transition: 0.5s;
 }
 
 .services .container .card .bottom a {
@@ -1168,12 +1208,10 @@ body>header .second-nav:hover {
     width: 70%;
 }
 
-.services .card:hover {
-    transform: translateY(-10px);
-}
-
-.services .card:hover::before {
-    width: 100%;
+.services .container .card .bottom a span {
+    position: relative;
+    left: -576px;
+    transition: 0.5s;
 }
 
 /* end services */
