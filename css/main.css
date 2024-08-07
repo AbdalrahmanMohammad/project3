@@ -1128,6 +1128,7 @@ body>header .second-nav:hover {
     left: 0;
     transition: 0.5s;
 }
+
 /* //////////// */
 
 .services .container .card::before {
@@ -1691,9 +1692,15 @@ body>header .second-nav:hover {
 
 .videos .container .left li {
     padding: 20px;
+    cursor: pointer;
 }
 
-.videos .container .left li:hover {
+/* .videos .container .left li:hover {
+    background-color: #fafafa;
+    color: var(--main-color);
+} */
+
+.videos .container .left li.show {
     background-color: #fafafa;
     color: var(--main-color);
 }
@@ -1715,16 +1722,23 @@ body>header .second-nav:hover {
     background-color: #e2e2e2;
     padding: 10px;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 .videos .container .right .bar {
     background-color: white;
     padding: 20px;
+    overflow: hidden;
+}
 
+.videos .container .right .bar div {
+    display: inline-block;
+    transition: 0.3s linear;
 }
 
 .videos img {
     max-width: 100%;
+    transition: 0.3s linear;
 }
 
 @media(max-width:992px) {
