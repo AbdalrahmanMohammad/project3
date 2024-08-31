@@ -590,8 +590,14 @@ body>header .second-nav:hover {
     margin-top: 10px;
 }
 
+.articles .container .image {
+    aspect-ratio: 4/3;
+}
+
 .articles .container img {
     max-width: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .articles .container .more {
@@ -632,9 +638,15 @@ body>header .second-nav:hover {
 .gallery .container .card::before {
     animation: gallery-image 0.5s linear;
 } */
+.gallery .container .card {
+    aspect-ratio: 1/1;
+
+}
 
 .gallery .container .card img {
     max-width: 100%;
+    width: 100%;
+    height: 100%;
     box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
     transition-duration: var(--main-transition);
     position: relative;
@@ -751,9 +763,18 @@ body>header .second-nav:hover {
 }
 
 .features .container .card .image {
+    display: grid;
     position: relative;
     overflow: hidden;
+    aspect-ratio: 1/1;
 }
+
+.features .container .card .image img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+}
+
 
 .features .container .card .image::before {
     content: "";
@@ -996,6 +1017,7 @@ body>header .second-nav:hover {
 
 
 .members .container .image {
+    aspect-ratio: 1/1;
     position: absolute;
     z-index: 2;
     max-width: 285px;
@@ -1007,6 +1029,8 @@ body>header .second-nav:hover {
 }
 
 .members .container img {
+    width: 100%;
+    height: 100%;
     max-width: 100%;
     border-radius: 10px;
     transition-duration: var(--main-transition);
@@ -1165,7 +1189,7 @@ body>header .second-nav:hover {
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height: 200px;
+    aspect-ratio: 4/3;
 }
 
 .services .container .card .top img {
@@ -1738,8 +1762,15 @@ body>header .second-nav:hover {
     padding: 10px;
     justify-content: space-between;
     overflow: hidden;
+    width: 80%;
 }
 
+.videos .container .right .image {
+    overflow: hidden;
+    aspect-ratio: 12 / 9;
+    width: 100%;
+    height: 80%;
+}
 .videos .container .right .bar {
     background-color: white;
     padding: 20px;
@@ -1754,6 +1785,8 @@ body>header .second-nav:hover {
 .videos img {
     max-width: 100%;
     transition: 0.3s linear;
+    width: 100%;
+    height: 100%;
 }
 
 @media(max-width:992px) {
@@ -1763,6 +1796,10 @@ body>header .second-nav:hover {
 
     .videos .right {
         gap: 20px;
+    }
+    .videos .container .right {
+        width: 100%;
+        height: 100%;
     }
 }
 
