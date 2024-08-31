@@ -1456,7 +1456,7 @@ body>header .second-nav:hover {
     gap: 10px;
 }
 
-.footer .container .one .icons i {
+.footer .container .one .icons a {
     display: flex;
     width: 45px;
     height: 45px;
@@ -1466,17 +1466,17 @@ body>header .second-nav:hover {
     transition-duration: var(--main-transition);
 }
 
-.footer .container .one .icons i:nth-child(1):hover {
+.footer .container .one .icons a:nth-child(1):hover {
     background-color: blue;
 }
 
-.footer .container .one .icons i:nth-child(2):hover {
-    background-color: rgb(15, 192, 236);
+.footer .container .one .icons a:nth-child(2):hover {
+    background-color: #075E54;
 }
 
-.footer .container .one .icons i:nth-child(3):hover {
+/* .footer .container .one .icons a:nth-child(3):hover {
     background-color: red;
-}
+} */
 
 .footer .container .one p {
     line-height: 2;
@@ -1500,7 +1500,7 @@ body>header .second-nav:hover {
 
 .footer .container li a::before {
     font-family: "Font Awesome 5 Free";
-    content: "\F101";
+    content: "\F100     ";
     font-weight: 900;
     margin-right: 10px;
     color: var(--main-color);
