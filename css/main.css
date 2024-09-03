@@ -327,8 +327,11 @@ body>header .second-nav {
     z-index: 2;
     transform: translateY(30px);
     opacity: 0;
-    transition-duration: 0.3s;
+    /* transition-duration: 0.3s; */
+    transition: opacity 0.3s, transform 0.3s;
     z-index: -1;
+    top: -1000000px;
+    /* display: none; */
 }
 
 body>header .second-nav .links-container {
@@ -412,11 +415,14 @@ body>header .second-nav img {
     }
 }
 
-body>header .container ul.main-nav>li:last-child>a:hover+.second-nav,
-body>header .second-nav:hover {
-    transform: translateY(0px);
-    opacity: 1;
-    z-index: 2;
+
+.showHeaderMenu{
+    transform: translateY(0px) !important;
+    opacity: 1 !important;
+    z-index: 2 !important;
+    display: flex !important;
+    /* left: 0 !important; */
+    top: 83px;
 }
 
 /* end header   */

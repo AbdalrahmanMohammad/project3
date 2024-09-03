@@ -1,3 +1,16 @@
+// start header
+let othersButton=document.querySelector(".others a");
+let popUpMenu=document.querySelector("body>header .second-nav");
+document.querySelector("body").addEventListener("click", handleBodyClick);
+function handleBodyClick(e) {
+    if (othersButton.contains(e.target) || popUpMenu.classList.contains("showHeaderMenu") && !popUpMenu.contains(e.target)) {
+        popUpMenu.classList.toggle("showHeaderMenu");
+        console.log("hello");
+    }
+};
+
+
+// end header
 // start gallery
 let gallery = document.querySelector(".gallery .container");
 let galleryCard = document.querySelectorAll(".gallery .container .card");
