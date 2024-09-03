@@ -5,7 +5,6 @@ document.querySelector("body").addEventListener("click", handleBodyClick);
 function handleBodyClick(e) {
     if (othersButton.contains(e.target) || popUpMenu.classList.contains("showHeaderMenu") && !popUpMenu.contains(e.target)) {
         popUpMenu.classList.toggle("showHeaderMenu");
-        console.log("hello");
     }
 };
 
