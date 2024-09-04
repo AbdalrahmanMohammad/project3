@@ -1298,6 +1298,7 @@ body>header .second-nav img {
 @media (max-width:992px) {
     .works .container {
         flex-direction: column;
+        align-items: center;
     }
 
     .works .container .card {
