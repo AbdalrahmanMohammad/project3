@@ -31,11 +31,13 @@ function toggleMenu(a) {
             menuPics[i].style.display = "none";
     }
     menuPics[menuIndex].style.display = "block";
-    if(a!="no")
-    if (menu.style.display == "flex")
-        menu.style.display = "none"
-    else
-        menu.style.display = "flex"
+    menu.querySelectorAll("span").forEach(span => {
+        span.style.display = "block";
+    }); if (a != "no")
+        if (menu.style.display == "flex")
+            menu.style.display = "none"
+        else
+            menu.style.display = "flex"
 }
 
 

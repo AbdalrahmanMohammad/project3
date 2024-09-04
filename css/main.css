@@ -1629,6 +1629,7 @@ body>header .second-nav img {
     top: 50%;
     cursor: pointer;
     width: fit-content;
+    display: none;
 
     &:hover,
     &:active {
