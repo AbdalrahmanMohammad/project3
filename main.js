@@ -128,6 +128,21 @@ works.addEventListener("click", (e) => {
 // the active effects works from gallery
 
 // end works
+
+// start articles
+let articles = document.querySelector(".articles .container");
+let articlesCard = document.querySelectorAll(".articles .container .card");
+
+articles.addEventListener("click", (e) => {
+    let card = e.target.closest(".card");
+    if (card) {
+        card.classList.toggle("show");
+    }
+});
+
+document.addEventListener("scroll", ()=>{makeActiveCard(articlesCard,150)});
+
+// end articles
 // start features
 let features = document.querySelector(".features .container");
 let featuresCard = document.querySelectorAll(".features .container .card");
@@ -222,6 +237,7 @@ videosul.addEventListener("click", (e) => {
 });
 // end top-videos
 
+// function for making active cards
 function makeActiveCard(arr,timevalue) {
     for (let i = 0; i < arr.length; i++) {
         const heading = arr[i].getBoundingClientRect();

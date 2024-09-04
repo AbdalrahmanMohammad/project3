@@ -613,11 +613,11 @@ body>header .second-nav img {
     transition-duration: var(--main-transition);
 }
 
-.articles .container .card:hover {
+.articles .container .card.show {
     transform: translateY(-10px);
     box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
-
 }
+
 
 .articles .container .text {
     height: 100px;
@@ -1232,13 +1232,14 @@ body>header .second-nav img {
 .services .container .card .bottom a {
     background-color: #f9f9f9;
     display: flex;
-    padding: 0 20px;
+    padding: 0 10px;
     justify-content: flex-end;
     align-items: center;
     width: 70%;
 }
 
 .services .container .card .bottom a span {
+    font-size: 15px;
     position: relative;
     left: -576px;
     transition: 0.5s;
