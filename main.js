@@ -107,19 +107,8 @@ gallery.addEventListener("click", (e) => {
 
 });
 
-document.addEventListener("scroll", makeActivegallery);
-function makeActivegallery() {
-    for (let i = 0; i < galleryCard.length; i++) {
-        const heading = galleryCard[i].getBoundingClientRect();
-        const VALUE = 150;
-        if (heading.top <= VALUE && heading.bottom >= VALUE) {
-            galleryCard[i].classList.add("show");
-        } else {
-            galleryCard[i].classList.remove("show");
+document.addEventListener("scroll", ()=>{makeActiveCard(galleryCard,150)});
 
-        }
-    }
-}
 // end gallery
 // start works
 let works = document.querySelector("#works .container");
@@ -150,18 +139,8 @@ features.addEventListener("click", (e) => {
     }
 });
 
-document.addEventListener("scroll", makeActivefeatures);
-function makeActivefeatures() {
-    for (let i = 0; i < featuresCard.length; i++) {
-        const heading = featuresCard[i].getBoundingClientRect();
-        const VALUE = 150;
-        if (heading.top <= VALUE && heading.bottom >= VALUE) {
-            featuresCard[i].classList.add("show");
-        } else {
-            featuresCard[i].classList.remove("show");
-        }
-    }
-}
+document.addEventListener("scroll", ()=>{makeActiveCard(featuresCard,150)});
+
 // end features
 // start members
 let members = document.querySelector(".members .container");
@@ -201,18 +180,7 @@ services.addEventListener("click", (e) => {
         card.classList.toggle("show");
     }
 });
-document.addEventListener("scroll", makeActiveservices);
-function makeActiveservices() {
-    for (let i = 0; i < servicesCard.length; i++) {
-        const heading = servicesCard[i].getBoundingClientRect();
-        const VALUE = 150;
-        if (heading.top <= VALUE && heading.bottom >= VALUE) {
-            servicesCard[i].classList.add("show");
-        } else {
-            servicesCard[i].classList.remove("show");
-        }
-    }
-}
+document.addEventListener("scroll", ()=>{makeActiveCard(servicesCard,150)});
 // end services
 
 // start top-videos
@@ -253,3 +221,15 @@ videosul.addEventListener("click", (e) => {
     }
 });
 // end top-videos
+
+function makeActiveCard(arr,timevalue) {
+    for (let i = 0; i < arr.length; i++) {
+        const heading = arr[i].getBoundingClientRect();
+        const VALUE = timevalue;
+        if (heading.top <= VALUE && heading.bottom >= VALUE) {
+            arr[i].classList.add("show");
+        } else {
+            arr[i].classList.remove("show");
+        }
+    }
+}
