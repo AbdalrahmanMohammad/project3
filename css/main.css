@@ -107,6 +107,31 @@ a {
         transition-delay: 0.5s;
     }
 }
+.special-heading-active{
+    color: white;
+    border-color: white;
+    transition-delay: 0.5s;
+
+    &::after {
+        right: 0;
+        width: 50%;
+        height: 100%;
+        border-radius: 0;
+        z-index: -1;
+        transition: right 0.3s, width 0.2s 0.3s, height 0.2s 0.3s, border-radius 0.2s 0.3s;
+
+    }
+
+    &::before {
+        left: 0;
+        width: 55%;
+        height: 100%;
+        border-radius: 0;
+        z-index: -1;
+        transition: left 0.3s, width 0.2s 0.3s, height 0.2s 0.3s, border-radius 0.2s 0.3s;
+    }
+
+}
 
 .spikes {
     /* margin-top: 100px; */

@@ -1,5 +1,23 @@
 // start special heading
+document.addEventListener("scroll", makeActive);
+let categories = document.querySelectorAll("body > div:not(.menu-container):not(.landing):not(.footer):not(.spikes)");
 
+let headings = document.querySelectorAll(".special-heading");
+function makeActive() {
+    for (let i = 0; i < categories.length; i++) {
+        const heading = categories[i].getBoundingClientRect();
+        const VALUE = 100;
+        // the boundries the section should be between to be considered as active
+        if (heading.top <= VALUE && heading.bottom >= VALUE) {
+            // add active class from the active section
+            categories[i].querySelector(".special-heading").classList.add("special-heading-active");
+        } else {
+            // remove active class from the inactive section
+            categories[i].querySelector(".special-heading").classList.remove("special-heading-active");
+
+        }
+    }
+}
 // end special heading
 // start header
 let othersButton = document.querySelector(".others a");
