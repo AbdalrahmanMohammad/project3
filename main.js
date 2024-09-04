@@ -1,3 +1,6 @@
+// start special heading
+
+// end special heading
 // start header
 let othersButton = document.querySelector(".others a");
 let popUpMenu = document.querySelector("body>header .second-nav");
@@ -88,6 +91,22 @@ gallery.addEventListener("click", (e) => {
 
 });
 // end gallery
+// start works
+let works = document.querySelector("#works .container");
+let worksCard = document.querySelectorAll("#works .container .card");
+let worksTitle = document.querySelectorAll("#works .container .card .title");
+let worksPrice = document.querySelectorAll("#works .container .card .prices");
+
+
+works.addEventListener("click", (e) => {
+    let card = e.target;
+    if (card.tagName == "IMG")
+        card = card.parentElement;
+    if (card.classList.contains("card"))
+        card.classList.toggle("show");
+
+});
+// end works
 // start features
 let features = document.querySelector(".features .container");
 let featuresCard = document.querySelectorAll(".features .container .card");
