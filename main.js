@@ -1,18 +1,16 @@
 // start special heading
-document.addEventListener("scroll", makeActive);
 let categories = document.querySelectorAll("body > div:not(.menu-container):not(.landing):not(.footer):not(.spikes)");
 
 let headings = document.querySelectorAll(".special-heading");
+
+document.addEventListener("scroll", makeActive);
 function makeActive() {
     for (let i = 0; i < categories.length; i++) {
         const heading = categories[i].getBoundingClientRect();
         const VALUE = 100;
-        // the boundries the section should be between to be considered as active
         if (heading.top <= VALUE && heading.bottom >= VALUE) {
-            // add active class from the active section
             categories[i].querySelector(".special-heading").classList.add("special-heading-active");
         } else {
-            // remove active class from the inactive section
             categories[i].querySelector(".special-heading").classList.remove("special-heading-active");
 
         }
@@ -108,6 +106,20 @@ gallery.addEventListener("click", (e) => {
         card.classList.toggle("show");
 
 });
+
+document.addEventListener("scroll", makeActivegallery);
+function makeActivegallery() {
+    for (let i = 0; i < galleryCard.length; i++) {
+        const heading = galleryCard[i].getBoundingClientRect();
+        const VALUE = 150;
+        if (heading.top <= VALUE && heading.bottom >= VALUE) {
+            galleryCard[i].classList.add("show");
+        } else {
+            galleryCard[i].classList.remove("show");
+
+        }
+    }
+}
 // end gallery
 // start works
 let works = document.querySelector("#works .container");
@@ -124,6 +136,8 @@ works.addEventListener("click", (e) => {
         card.classList.toggle("show");
 
 });
+// the active effects works from gallery
+
 // end works
 // start features
 let features = document.querySelector(".features .container");
@@ -136,6 +150,18 @@ features.addEventListener("click", (e) => {
     }
 });
 
+document.addEventListener("scroll", makeActivefeatures);
+function makeActivefeatures() {
+    for (let i = 0; i < featuresCard.length; i++) {
+        const heading = featuresCard[i].getBoundingClientRect();
+        const VALUE = 150;
+        if (heading.top <= VALUE && heading.bottom >= VALUE) {
+            featuresCard[i].classList.add("show");
+        } else {
+            featuresCard[i].classList.remove("show");
+        }
+    }
+}
 // end features
 // start members
 let members = document.querySelector(".members .container");
@@ -150,6 +176,19 @@ members.addEventListener("click", (e) => {
         card.classList.toggle("hide");
     }
 });
+
+document.addEventListener("scroll", makeActivemembers);
+function makeActivemembers() {
+    for (let i = 0; i < membersCard.length; i++) {
+        const heading = membersCard[i].getBoundingClientRect();
+        const VALUE = 150;
+        if (heading.top <= VALUE && heading.bottom >= VALUE) {
+            membersCard[i].classList.remove("hide");
+        } else {
+            membersCard[i].classList.add("hide");
+        }
+    }
+}
 // end members
 
 // start services
@@ -162,6 +201,18 @@ services.addEventListener("click", (e) => {
         card.classList.toggle("show");
     }
 });
+document.addEventListener("scroll", makeActiveservices);
+function makeActiveservices() {
+    for (let i = 0; i < servicesCard.length; i++) {
+        const heading = servicesCard[i].getBoundingClientRect();
+        const VALUE = 150;
+        if (heading.top <= VALUE && heading.bottom >= VALUE) {
+            servicesCard[i].classList.add("show");
+        } else {
+            servicesCard[i].classList.remove("show");
+        }
+    }
+}
 // end services
 
 // start top-videos
