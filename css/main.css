@@ -383,14 +383,15 @@ body>header .second-nav .links-container a i {
 body>header .second-nav img {
     width: 500px;
 }
+
 /* i minipulate this class with */
-.showHeaderMenu{
+.showHeaderMenu {
     transform: translateY(0px) !important;
     opacity: 1 !important;
     z-index: 2 !important;
     display: flex !important;
     top: 83px !important;
-    
+
 }
 
 @media(max-width:992px) {
@@ -398,8 +399,8 @@ body>header .second-nav img {
         display: none;
     }
 
-    .showHeaderMenu{
-        top: 120px !important;     
+    .showHeaderMenu {
+        top: 120px !important;
     }
 }
 
@@ -415,7 +416,7 @@ body>header .second-nav img {
 
     body>header .second-nav .links-container .links:not(:last-child) li:last-child {
         border-bottom: 1px solid #777;
-        }
+    }
 }
 
 @media(max-width:1200px) {
@@ -1331,10 +1332,11 @@ body>header .second-nav img {
     font-weight: bold;
 }
 
-.videos .container .left ul{
+.videos .container .left ul {
     overflow: auto;
     height: 80vh;
-    direction: ltr; /* Ensures scrollbar is on the right */
+    direction: ltr;
+    /* Ensures scrollbar is on the right */
 }
 
 .videos .container .left ul::-webkit-scrollbar {
@@ -1345,6 +1347,7 @@ body>header .second-nav img {
 .videos .container .left ul::-webkit-scrollbar-track {
     background-color: #f0f0f0;
 }
+
 .videos .container .left ul::-webkit-scrollbar-thumb {
     background-color: #808080;
     border-radius: 5px;
@@ -1425,7 +1428,8 @@ body>header .second-nav img {
         width: 100%;
         height: 100%;
     }
-    .videos .container .left ul{
+
+    .videos .container .left ul {
         height: 30vh;
     }
 }
@@ -1588,3 +1592,64 @@ body>header .second-nav img {
 }
 
 /* end footer */
+/* start menu */
+.menu-container {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    width: 80%;
+    transform: translateX(-50%);
+    height: 80vh;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.menu {
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 0 2px 15px rgb(0 0 0 / 90%);
+    aspect-ratio: 44/61;
+    position: relative;
+}
+
+.menu img {
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.menu span {
+    font-size: 80px;
+    color: var(--main-color);
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    width: fit-content;
+
+    &:hover,
+    &:active {
+        color: #1787e0;
+    }
+
+    &:first-child {
+        transform: translate(-100%, -50%);
+        left: 0px;
+    }
+
+    &:last-child {
+        right: 0;
+        transform: translate(100%, -50%);
+    }
+}
+
+@media (max-width: 992px) {
+    .menu span {
+        font-size: 50px !important;
+    }
+}
+
+/* end menu */

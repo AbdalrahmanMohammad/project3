@@ -1,15 +1,66 @@
 // start header
-let othersButton=document.querySelector(".others a");
-let popUpMenu=document.querySelector("body>header .second-nav");
+let othersButton = document.querySelector(".others a");
+let popUpMenu = document.querySelector("body>header .second-nav");
 document.querySelector("body").addEventListener("click", handleBodyClick);
 function handleBodyClick(e) {
+    let menu = document.querySelector(".menu-container");
     if (othersButton.contains(e.target) || popUpMenu.classList.contains("showHeaderMenu") && !popUpMenu.contains(e.target)) {
         popUpMenu.classList.toggle("showHeaderMenu");
     }
+    if (menu.style.display == "flex" && !menu.querySelector(".menu").contains(e.target) && e.target != (document.querySelector("#menu-button"))) {
+        menu.style.display = "none";
+    }
+
 };
 
-
 // end header
+// start menu
+let menuButton = document.querySelector("#menu-button");
+menuButton.addEventListener("click", showmenu);
+let menu = document.querySelector(".menu-container");
+menu.style.display = "none";
+let menuPics = document.querySelectorAll(".menu img");
+let menuIndex = 0;
+for (let i = 0; i < menuPics.length; i++) {
+    if (i != menuIndex)
+        menuPics[i].style.display = "none";
+}
+function toggleMenu(a) {
+    for (let i = 0; i < menuPics.length; i++) {
+        if (i != menuIndex)
+            menuPics[i].style.display = "none";
+    }
+    menuPics[menuIndex].style.display = "block";
+    if(a!="no")
+    if (menu.style.display == "flex")
+        menu.style.display = "none"
+    else
+        menu.style.display = "flex"
+}
+
+
+function showmenu(e) {
+    e.preventDefault();  // You can also use "event" instead of "e" if you prefer
+    toggleMenu();
+}
+
+let right = document.querySelector(".menu span:first-child");
+let left = document.querySelector(".menu span:last-child");
+right.addEventListener("click", () => {
+    menuIndex++;
+    if (menuIndex == menuPics.length)
+        menuIndex = 0;
+    toggleMenu("no");
+});
+left.addEventListener("click", () => {
+    menuIndex--; if (menuIndex == -1)
+        menuIndex = menuPics.length - 1;
+    toggleMenu("no");
+});
+
+
+
+// end menu
 // start gallery
 let gallery = document.querySelector(".gallery .container");
 let galleryCard = document.querySelectorAll(".gallery .container .card");
