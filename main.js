@@ -9,6 +9,8 @@ function handleBodyClick(e) {
     }
     if (menu.style.display == "flex" && !menu.querySelector(".menu").contains(e.target) && e.target != (document.querySelector("#menu-button"))) {
         menu.style.display = "none";
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
     }
 
 };
@@ -33,11 +35,18 @@ function toggleMenu(a) {
     menuPics[menuIndex].style.display = "block";
     menu.querySelectorAll("span").forEach(span => {
         span.style.display = "block";
-    }); if (a != "no")
-        if (menu.style.display == "flex")
-            menu.style.display = "none"
-        else
-            menu.style.display = "flex"
+    });
+    if (a != "no")
+        if (menu.style.display == "flex") {
+            menu.style.display = "none";
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+        }
+        else {
+            menu.style.display = "flex";
+            document.body.style.overflow = 'hidden';
+            document.documentElement.style.overflow = 'hidden';
+        }
 }
 
 
