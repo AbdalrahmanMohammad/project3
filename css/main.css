@@ -332,8 +332,9 @@ body>header .container .logo {
     }
 
     body>header .container ul.main-nav>li>a {
-        font-size: 14px;
+        font-size: 12px;
         padding: 10px;
+        text-align: center;
     }
 
 }

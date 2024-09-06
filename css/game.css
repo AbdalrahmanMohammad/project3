@@ -9,7 +9,7 @@ body {
   min-height: calc(100vh);
   background-color: white;
   position: relative;
-  background-image: url("../project3/images/aborateb.jpg");
+  background-image: url("../images/aborateb.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
