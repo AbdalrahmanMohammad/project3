@@ -7,6 +7,10 @@
     --section-padding: 100px;
     --section-background: #ececec;
 }
+*
+{
+    user-select: none;
+}
 
 /* End variables */
 /* Start Global Rules */
@@ -1464,6 +1468,9 @@ body>header .second-nav img {
 
 /* end videos */
 /* start footer */
+.footer *{
+    user-select: text;
+}
 .footer {
     padding-top: 70px;
     background-color: #191919;
