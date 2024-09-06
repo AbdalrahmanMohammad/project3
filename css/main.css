@@ -847,7 +847,7 @@ body>header .second-nav img {
 }
 
 .features .container .card .text {
-    padding: 10px 30px;
+    padding: 10px 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -908,7 +908,7 @@ body>header .second-nav img {
 }
 
 .features .container .card.red .image::before {
-    background-color: rgba(199, 77, 70, 0.2);
+    background-color: rgba(199, 77, 70, 0.1);
 
 }
 
@@ -929,7 +929,7 @@ body>header .second-nav img {
 }
 
 .features .container .card.green .image::before {
-    background-color: rgba(0, 150, 136, 0.2);
+    background-color: rgba(0, 150, 136, 0.1);
 }
 
 .features .card.green .prices {
@@ -949,7 +949,7 @@ body>header .second-nav img {
 }
 
 .features .container .card.blue .image::before {
-    background-color: rgba(3, 169, 244, 0.2);
+    background-color: rgba(3, 169, 244, 0.1);
 }
 
 .features .card.blue .prices {

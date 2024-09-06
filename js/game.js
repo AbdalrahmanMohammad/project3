@@ -206,7 +206,7 @@ function showResult(flag) {
 
   if(flag)// success
   {
-    resultPopUp.querySelector(".message").innerHTML=`مبروك ${yourName} لقد فزت باللعبة!`;
+    resultPopUp.querySelector(".message").innerHTML=`مبروك ${yourName} لقد فزت بالتحدي!`;
     resultPopUp.querySelector(".no-of-worng").innerHTML=`عدد المحاولات الخاطئة: ${noOfTries}`;
   }
   else{
