@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لعبة أسرار</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/game.css">
+</head>
+
+<body>
+
+  <!-- popup for result -->
+  <div class="result">
+    <div class="result-container">
+      <div class="icon"><i class="fa-regular fa-circle-check"></i></div>
+      <div class="message">مبروك عبدالرحمن لقد فزت باللعبة!</div>
+      <div class="no-of-worng">عدد المحاولات الخاطئة: 15</div>
+      <div class="date">15/5/2024</div>
+      <div class="share-with-us">فضلاً شاركنا بصورة نتيجتك على منشور المسابقة على <a
+          href="https://www.facebook.com/profile.php?id=61558592159405">الفيسبوك</a></div>
+      <button class="play-again">أعد اللعب</button>
+    </div>
+  </div>
+
+  <!-- Modal Popup for Entering Name -->
+  <div class="name-popup" id="namePopup">
+    <div class="name-popup-content">
+      <h2>أدخل اسمك:</h2>
+      <input type="text" id="playerNameInput" placeholder="الاسم">
+      <button id="startGameBtn">ابدأ اللعب</button>
+    </div>
+  </div>
+
+
+  <div class="control-buttons">
+    <span>أهلا بك في لعبة أسرار</span>
+    <span>شروط اللعبة</span>
+    <ul>
+      <li>تابعنا على صفحة <a href="https://www.facebook.com/profile.php?id=61558592159405">الفيسبوك</a> حيث يتم الاعلان
+        عن مسابقات بشكل دوري.</li>
+      <li>عندما تكون المسابقة قائمة ادخل الى لعبة اسرار.</li>
+      <li>قم بادخال اسمك في اللعبة.</li>
+      <li>عليك ايجاد الصور المتطابقة في محاولات أقل من 30 محاولة.</li>
+      <li>في حالة نجاحك باللعبة قم باخذ لقطة شاشة وشاركها على منشور المسابقة لتدخل السحب.</li>
+    </ul>
+    <span>ابدأ اللعب</span>
+  </div>
+  <div class="info-container">
+    <div class="name">
+      مرحبا: <span></span>
+    </div>
+    <div class="tries">
+      المحاولات الخاطئة: <span>0</span>
+    </div>
+  </div>
+  <div class="memory-game-blocks">
+    <div class="game-block" data-technology="angular">
+      <div class="face front"></div>
+      <div class="face back">
+        <img decoding="async" src="images/معرض/العنب-الطبيعي.jpg" alt="">
+      </div>
+    </div>
+    <div class="game-block" data-technology="angular">
+      <div class="face front"></div>
+      <div class="face back">
+        <img decoding="async" src="images/معرض/العنب-الطبيعي.jpg" alt="">
+      </div>
+    </div>
+    <div class="game-block" data-technology="vuejs">
+      <div class="face front"></div>
+      <div class="face back">
+        <img decoding="async" src="images/معرض/الكريب-الملفوف.jpg" alt="">
+      </div>
+    </div>
+    <div class="game-block" data-technology="vuejs">
+      <div class="face front"></div>
+      <div class="face back">
+        <img decoding="async" src="images/معرض/الكريب-الملفوف.jpg" alt="">
+      </div>
+    </div>
+    <div class="game-block" data-technology="css3">
+      <div class="face front"></div>
+      <div class="face back">
+        <img decoding="async" src="images/معرض/الكريب-كما-يجب-ان-يكون.jpg" alt="">
+      </div>
+    </div>
+    <div class="game-block" data-technology="css3">
+      <div class="face front"></div>
+      <div class="face back">
+        <img decoding="async" src="images/معرض/الكريب-كما-يجب-ان-يكون.jpg" alt="">
+      </div>
+    </div>
+    <div class="game-block" data-technology="github">
+      <div class="face front"></div>
+      <div class="face back">
+        <img decoding="async" src="images/معرض/توزيعات-أسرار.jpg" alt="">
+      </div>
+    </div>
+    <div class="game-block" data-technology="github">
+      <div class="face front"></div>
+      <div class="face back">
+        <img decoding="async" src="images/معرض/توزيعات-أسرار.jpg" alt="">
+      </div>
+    </div>
+    <div class="game-block" data-technology="gulpjs">
+      <div class="face front"></div>
+      <div class="face back">
+        <img decoding="async" src="images/معرض/سلة_شوكولاتة.jpeg" alt="">
+      </div>
+    </div>
+    <div class="game-block" data-technology="gulpjs">
+      <div class="face front"></div>
+      <div class="face back">
+        <img decoding="async" src="images/معرض/سلة_شوكولاتة.jpeg" alt="">
+      </div>
+    </div>
+    <div class="game-block" data-technology="html5">
+      <div class="face front"></div>
+      <div class="face back">
+        <img decoding="async" src="images/معرض/شوكولاتة-أسرار.jpg" alt="">
+      </div>
+    </div>
+    <div class="game-block" data-technology="html5">
+      <div class="face front"></div>
+      <div class="face back">
+        <img decoding="async" src="images/معرض/شوكولاتة-أسرار.jpg" alt="">
+      </div>
+    </div>
+    <div class="game-block" data-technology="jest">
+      <div class="face front"></div>
+      <div class="face back">
+        <img decoding="async" src="images/معرض/فشافيش-الذهب.jpg" alt="">
+      </div>
+    </div>
+    <div class="game-block" data-technology="jest">
+      <div class="face front"></div>
+      <div class="face back">
+        <img decoding="async" src="images/معرض/فشافيش-الذهب.jpg" alt="">
+      </div>
+    </div>
+    <div class="game-block" data-technology="mongodb">
+      <div class="face front"></div>
+      <div class="face back">
+        <img decoding="async" src="images/معرض/كوكتيل-فواكه.jpg" alt="">
+      </div>
+    </div>
+    <div class="game-block" data-technology="mongodb">
+      <div class="face front"></div>
+      <div class="face back">
+        <img decoding="async" src="images/معرض/كوكتيل-فواكه.jpg" alt="">
+      </div>
+    </div>
+    <div class="game-block" data-technology="python">
+      <div class="face front"></div>
+      <div class="face back">
+        <img decoding="async" src="images/كوكتيل/فواكه.jpeg" alt="">
+      </div>
+    </div>
+    <div class="game-block" data-technology="python">
+      <div class="face front"></div>
+      <div class="face back">
+        <img decoding="async" src="images/كوكتيل/فواكه.jpeg" alt="">
+      </div>
+    </div>
+    <div class="game-block" data-technology="react">
+      <div class="face front"></div>
+      <div class="face back">
+        <img decoding="async" src="images/كريب/فريرو.jpg" alt="">
+      </div>
+    </div>
+    <div class="game-block" data-technology="react">
+      <div class="face front"></div>
+      <div class="face back">
+        <img decoding="async" src="images/كريب/فريرو.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  <button onclick="location.href='index.html'" class="return-back">الرجوع للصفحة الرئيسية</button>
+
+  <audio id="success" src="audio/success.mp4" preload="auto"></audio>
+  <audio id="fail" src="audio/fail.mp4" preload="auto"></audio>
+  <script src="js/game.js"></script>
+</body>
+
+</html>
