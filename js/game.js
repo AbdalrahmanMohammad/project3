@@ -34,7 +34,7 @@ document.querySelector(".control-buttons span:last-child").onclick = function ()
 };
 
 // Effect Duration
-let duration = 1000;
+let duration = 750;
 
 // Select Blocks Container
 let blocksContainer = document.querySelector(".memory-game-blocks");
