@@ -357,6 +357,7 @@ body {
 .result .icon i {
   color: green;
   font-size: 70px;
+  transition: 1s;
 }
 
 .result a {

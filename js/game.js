@@ -219,6 +219,10 @@ function showResult(flag) {
     resultPopUp.querySelector("i").classList.remove("fa-circle-check");
   }
 
+  
+let intervalID = setInterval(function(){resultPopUp.querySelector("i").style.transform = 'rotate(360deg)';}, 0);
+
+
 }
 
 document.querySelector(".play-again").addEventListener("click", () => {
