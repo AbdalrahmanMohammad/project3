@@ -1,5 +1,5 @@
 // start special heading
-let categories = document.querySelectorAll("body > div:not(.menu-container):not(.landing):not(.footer):not(.spikes)");
+let categories = document.querySelectorAll("body > div:not(.menu-container):not(.landing):not(.footer):not(.spikes):not(.design)");
 
 let headings = document.querySelectorAll(".special-heading");
 
