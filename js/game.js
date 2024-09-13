@@ -132,7 +132,7 @@ function checkMatchedBlocks(firstBlock, secondBlock) {
   } else {
 
     triesElement.innerHTML = parseInt(triesElement.innerHTML) + 1;
-    if(parseInt(triesElement.innerHTML)>20)
+    if(parseInt(triesElement.innerHTML)>10)
     {
       showResult(false);
     }
