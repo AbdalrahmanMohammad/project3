@@ -107,7 +107,7 @@ gallery.addEventListener("click", (e) => {
 
 });
 
-document.addEventListener("scroll", ()=>{makeActiveCard(galleryCard,150)});
+document.addEventListener("scroll", () => { makeActiveCard(galleryCard, 150) });
 
 // end gallery
 // start works
@@ -140,7 +140,7 @@ articles.addEventListener("click", (e) => {
     }
 });
 
-document.addEventListener("scroll", ()=>{makeActiveCard(articlesCard,150)});
+document.addEventListener("scroll", () => { makeActiveCard(articlesCard, 150) });
 
 // end articles
 // start features
@@ -154,7 +154,7 @@ features.addEventListener("click", (e) => {
     }
 });
 
-document.addEventListener("scroll", ()=>{makeActiveCard(featuresCard,150)});
+document.addEventListener("scroll", () => { makeActiveCard(featuresCard, 150) });
 
 // end features
 // start members
@@ -195,7 +195,7 @@ services.addEventListener("click", (e) => {
         card.classList.toggle("show");
     }
 });
-document.addEventListener("scroll", ()=>{makeActiveCard(servicesCard,150)});
+document.addEventListener("scroll", () => { makeActiveCard(servicesCard, 150) });
 // end services
 
 // start top-videos
@@ -238,7 +238,7 @@ videosul.addEventListener("click", (e) => {
 // end top-videos
 
 // function for making active cards
-function makeActiveCard(arr,timevalue) {
+function makeActiveCard(arr, timevalue) {
     for (let i = 0; i < arr.length; i++) {
         const heading = arr[i].getBoundingClientRect();
         const VALUE = timevalue;
@@ -251,6 +251,21 @@ function makeActiveCard(arr,timevalue) {
 }
 
 // change the theme between light and dark mode
-document.querySelector(".logo").addEventListener("click",()=>{
+let mode = document.querySelector(".mode");
+mode.addEventListener("click", () => {
     document.querySelector("body").classList.toggle("light-mode");
+    if (document.querySelector("body").classList.contains("light-mode")) {
+        mode.src = "images/moon.png";
+        localStorage.setItem('theme', 'light');
+    }
+    else {
+        mode.src = "images/sun.png";
+        localStorage.setItem('theme', 'dark');
+    }
 });
+
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'light') {
+    document.querySelector("body").classList.add("light-mode");
+    mode.src = "images/moon.png";
+}

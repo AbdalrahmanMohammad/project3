@@ -351,6 +351,12 @@ body>header .container .logo {
     }
 }
 
+body>header .container .mode {
+    transform: translate(-10px, -50%);
+    width: 30px;
+    cursor: pointer;
+}
+
 @media (max-width:767px) {
     body>header .container {
         flex-direction: column;
@@ -365,6 +371,12 @@ body>header .container .logo {
         font-size: 12px;
         padding: 10px;
         text-align: center;
+    }
+
+    body>header .container .mode {
+        position: absolute;
+        transform: translate(-10px, -66%);
+        top: 50%;
     }
 
 }
