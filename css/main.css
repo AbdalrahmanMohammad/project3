@@ -1568,7 +1568,8 @@ body.light-mode .videos .container .right {
     background-color: #1a1a1a;
     padding: 20px;
     overflow: hidden;
-    color: rgb(61, 59, 59);
+    /* color: rgb(61, 59, 59); */
+    color: rgba(255, 217, 0, 0.664);
 }
 
 body.light-mode .videos .container .right .bar {
