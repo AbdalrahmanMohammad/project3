@@ -793,7 +793,6 @@ body.light-mode .gallery .container .card::before {
     text-align: center;
     display: flex;
     justify-content: space-evenly;
-    opacity: 50%;
     display: none;
     justify-content: center;
 
@@ -801,7 +800,6 @@ body.light-mode .gallery .container .card::before {
 
 .gallery .card .title {
     font-size: 30px;
-    opacity: 50%;
     font-weight: bold;
     position: absolute;
     top: 10px;
@@ -813,8 +811,10 @@ body.light-mode .gallery .container .card::before {
 
 .gallery .card.show .title,
 .gallery .card.show .prices {
+    color: var(--main-color);
     display: flex;
     justify-content: space-evenly;
+    opacity: 70%;
 }
 
 .gallery .card.show img {
@@ -938,12 +938,16 @@ body.light-mode .features .container .card {
 }
 
 .features .container .card .text h2 {
+    color: #868484;
     margin-bottom: 30px;
     font-size: 40px;
     font-weight: bold;
     position: relative;
     width: fit-content;
 }
+
+body.light-mode .features .container .card .text h2 {
+color: inherit;}
 
 .features .container .card .text h2::after {
     content: "";
@@ -1152,8 +1156,12 @@ body.light-mode .members .container .back .text {
     margin-bottom: 10px;
 }
 
+.members .container .back p {
+    color: #b9b9b9;
+}
+
 .members .container .back .social {
-    color: rgb(61, 59, 59);
+    color: #b9b9b9;
     width: calc(100% - 285px);
     display: flex;
     flex-direction: column;
@@ -1190,6 +1198,10 @@ body.light-mode .members .container .back .social {
 }
 
 .members .container .card.hide h3 {
+    color: #777;
+}
+
+.members .container .card.hide p {
     color: #777;
 }
 
@@ -1507,10 +1519,14 @@ body.light-mode .videos .container .left ul::-webkit-scrollbar-thumb {
 
 
 .videos .container .left li {
-    color: rgb(61, 59, 59);
+    color: #b9b9b9;
     padding: 20px;
     text-align: right;
     cursor: pointer;
+}
+
+body.light-mode .videos .container .left li {
+    color: rgb(61, 59, 59);
 }
 
 /* body.light-mode .videos .container .left li {
