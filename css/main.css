@@ -855,7 +855,7 @@ body.light-mode .gallery .container .card::before {
     color: var(--main-color);
     display: flex;
     justify-content: space-evenly;
-    opacity: 70%;
+    opacity: 80%;
 }
 
 .gallery .card.show img {
