@@ -125,12 +125,13 @@ a {
         transition-delay: 0.5s;
     } */
 }
+
 body.light-mode .special-heading {
     color: black;
 }
 
 body .special-heading-active {
-    color: var(--black)!important;
+    color: var(--black) !important;
     border-color: var(--black);
     transition-delay: 0.5s;
 
@@ -682,6 +683,7 @@ body.light-mode .landing p {
     border-radius: 5px;
     overflow: hidden;
     transition-duration: var(--main-transition);
+    background-color: rgba(102, 102, 102, .09);
 }
 
 .articles .container .card.show {
@@ -876,10 +878,13 @@ body.light-mode .gallery .container .card::before {
     border: 1px solid black;
     height: fit-content;
     cursor: pointer;
+    background-color: var(--section-background);
 }
 
 body.light-mode .features .container .card {
     border: 1px solid #ccc;
+    background-color: inherit;
+
 }
 
 /* .features .container .card:hover .image::after {
@@ -925,12 +930,16 @@ body.light-mode .features .container .card {
     left: -5px;
     width: 104%;
     height: 50%;
-    background-color: var(--section-background-alt);
+    background-color: var(--section-background);
     z-index: 6;
     /* clip-path: polygon(0 70%, 110% 0, 100% 100%, 0% 100%); */
     clip-path: polygon(0 80%, 200% 0, 100% 100%, 0% 100%);
 
     transition-duration: .5s;
+}
+
+body.light-mode .features .container .card .image::after {
+    background-color: white;
 }
 
 .features .container .card .text {
@@ -951,7 +960,8 @@ body.light-mode .features .container .card {
 }
 
 body.light-mode .features .container .card .text h2 {
-color: inherit;}
+    color: inherit;
+}
 
 .features .container .card .text h2::after {
     content: "";
