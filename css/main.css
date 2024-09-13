@@ -59,6 +59,7 @@ a {
 }
 
 .special-heading {
+    color: var(--main-color);
     margin: 0 auto;
     margin-bottom: 80px;
     font-size: 30px;
@@ -118,15 +119,18 @@ a {
         transition: left 0.3s, width 0.2s 0.3s, height 0.2s 0.3s, border-radius 0.2s 0.3s;
     }
 
-    &:hover {
+    /* &:hover {
         color: var(--black);
         border-color: var(--black);
         transition-delay: 0.5s;
-    }
+    } */
+}
+body.light-mode .special-heading {
+    color: black;
 }
 
-.special-heading-active {
-    color: var(--black);
+body .special-heading-active {
+    color: var(--black)!important;
     border-color: var(--black);
     transition-delay: 0.5s;
 
