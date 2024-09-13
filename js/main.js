@@ -249,3 +249,8 @@ function makeActiveCard(arr,timevalue) {
         }
     }
 }
+
+// change the theme between light and dark mode
+document.querySelector(".logo").addEventListener("click",()=>{
+    document.querySelector("body").classList.toggle("light-mode");
+});
