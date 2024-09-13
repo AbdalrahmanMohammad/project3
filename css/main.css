@@ -883,7 +883,10 @@ body.light-mode .features .container .card {
 } */
 .features .container .card.show .image::after {
     background-color: var(--section-background-alt);
-    clip-path: polygon(0 70%, -100% 15%, 100% 100%, 0% 100%);
+    /* background-color: #1a1a1a50; */
+    opacity: .5;
+    /* transition: 2s; */
+    clip-path: polygon(0 70%, -100% 105%, 100% 100%, 0% 100%);
 }
 
 .features .container .card .image {
@@ -923,7 +926,7 @@ body.light-mode .features .container .card {
     /* clip-path: polygon(0 70%, 110% 0, 100% 100%, 0% 100%); */
     clip-path: polygon(0 80%, 200% 0, 100% 100%, 0% 100%);
 
-    transition-duration: var(--main-transition);
+    transition-duration: .5s;
 }
 
 .features .container .card .text {
