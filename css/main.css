@@ -357,10 +357,44 @@ body>header .container .logo {
     }
 }
 
+@keyframes rotate-mode {
+    0% {
+        transform: rotate(0deg) translate(-10px, -50%);
+    }
+
+    3% {
+        transform: rotate(10deg) translate(-10px, -50%);
+    }
+
+    6% {
+        transform: rotate(0deg) translate(-10px, -50%);
+    }
+
+    9% {
+        transform: rotate(10deg) translate(-10px, -50%);
+    }
+
+    12% {
+        transform: rotate(0deg) translate(-10px, -50%);
+    }
+    15% {
+        transform: rotate(10deg) translate(-10px, -50%);
+    }
+
+    18% {
+        transform: rotate(0deg) translate(-10px, -50%);
+    }
+
+    100%{
+        transform: rotate(0deg) translate(-10px, -50%);
+    }
+}
+
 body>header .container .mode {
     transform: translate(-10px, -50%);
     width: 30px;
     cursor: pointer;
+    animation: rotate-mode 7s linear infinite;
 }
 
 @media (max-width:767px) {
@@ -879,7 +913,7 @@ body.light-mode .gallery .container .card::before {
     border: 1px solid black;
     height: fit-content;
     cursor: pointer;
-    background-color:#272626;
+    background-color: #272626;
 }
 
 body.light-mode .features .container .card {
@@ -931,7 +965,7 @@ body.light-mode .features .container .card {
     width: 104%;
     height: 50%;
     /* background-color:#212121; */
-    background-color:#272626;
+    background-color: #272626;
     z-index: 6;
     /* clip-path: polygon(0 70%, 110% 0, 100% 100%, 0% 100%); */
     clip-path: polygon(0 80%, 200% 0, 100% 100%, 0% 100%);
@@ -1332,7 +1366,7 @@ body.light-mode .members .container .back .social {
     right: 20%;
     top: 0;
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-    
+
 }
 
 body.light-mode .services .container .card .bottom::before {
