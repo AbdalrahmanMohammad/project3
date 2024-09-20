@@ -1365,7 +1365,7 @@ body.light-mode .members .container .back .social {
     background-color: #292525;
     right: 20%;
     top: 0;
-    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    clip-path: polygon(25% 0%, 100% -3%, 75% 103%, 0% 100%);
 
 }
 
